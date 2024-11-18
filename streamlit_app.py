@@ -13,6 +13,8 @@ session = get_active_session()
 my_dataframe = session.table("smoothies.public.orders").filter(col("ORDER_FILLED")==0).collect()
 editable_df = st.data_editor(my_dataframe)
 submitted = st.button('submit')
+cnx = st.connection("snowflake")
+session = cnx.session()
 
 if submitted:
 
