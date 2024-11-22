@@ -9,15 +9,7 @@ st.write(
 )
 
 # Establish Snowflake connection and session
-cnx = st.connection(
-    "snowflake",
-    account="GPCZETT.CGB39045",
-    user="ashish",
-    password="@rjuN1997",
-    role="SYSADMIN",
-    warehouse="COMPUTE_WH",
-    database="smoothies",
-    schema="public")
+cnx = st.connection("snowflake")
 session = cnx.session()
 
 
